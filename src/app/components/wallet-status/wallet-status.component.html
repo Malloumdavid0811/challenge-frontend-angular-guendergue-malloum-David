@@ -1,0 +1,23 @@
+<div class="wallet-status-container">
+  <div class="wallet-status-card">
+    <h3>Statut du Portefeuille</h3>
+    
+    <div class="status-section">
+      <div class="status-badge-container">
+        <span class="status-badge" [ngClass]="isConnected ? 'connected' : 'disconnected'">
+          {{ isConnected ? 'Connecté' : 'Non connecté' }}
+        </span>
+      </div>
+
+      <div *ngIf="isConnected && walletAddress" class="address-section">
+        <label>Adresse:</label>
+        <span class="wallet-address">{{ truncatedAddress }}</span>
+      </div>
+
+      <div *ngIf="!isConnected" class="disconnected-message">
+        <p>Veuillez connecter votre portefeuille pour continuer</p>
+        <button class="btn-connect" (click)="connectWallet()">Connecter le portefeuille</button>
+      </div>
+    </div>
+  </div>
+</div>

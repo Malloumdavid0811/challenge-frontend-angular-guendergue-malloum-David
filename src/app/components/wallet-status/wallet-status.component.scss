@@ -1,0 +1,95 @@
+@use '../../../scss/variables' as vars;
+@use '../../../scss/mixins' as mix;
+
+.wallet-status-container {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+
+  .wallet-status-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+
+    h3 {
+      color: vars.$primary-color;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .status-section {
+      .status-badge-container {
+        margin-bottom: 1.5rem;
+
+        .status-badge {
+          display: inline-block;
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          font-weight: 500;
+          font-size: 0.9rem;
+
+          &.connected {
+            background-color: vars.$success-light;
+            color: vars.$success-dark;
+            border: 1px solid vars.$success-color;
+          }
+
+          &.disconnected {
+            background-color: vars.$danger-light;
+            color: vars.$danger-dark;
+            border: 1px solid vars.$danger-color;
+          }
+        }
+      }
+
+      .address-section {
+        background: vars.$gray-100;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+
+        label {
+          font-weight: 600;
+          color: vars.$gray-700;
+          margin-right: 0.5rem;
+        }
+
+        .wallet-address {
+          font-family: monospace;
+          color: vars.$primary-color;
+          font-size: 1.1rem;
+        }
+      }
+
+      .disconnected-message {
+        text-align: center;
+        padding: 2rem 0;
+
+        p {
+          color: vars.$gray-600;
+          margin-bottom: 1.5rem;
+        }
+
+        .btn-connect {
+          @include mix.button-primary;
+          padding: 0.75rem 2rem;
+          font-size: 1rem;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(vars.$primary-color, 0.3);
+          }
+        }
+      }
+    }
+  }
+}
