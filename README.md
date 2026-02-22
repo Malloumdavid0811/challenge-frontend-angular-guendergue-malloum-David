@@ -18,6 +18,6 @@ Verification
     Wallet address displays in truncated format when connected
     Connection status badge shows correct color (green when connected, red when not)
 
-
+My result
 
 
