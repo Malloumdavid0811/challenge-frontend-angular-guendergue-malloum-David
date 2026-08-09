@@ -1,4 +1,4 @@
-### Challenge Frontend sur Angular
+# Challenge Frontend sur Angular
 
 ## A. Développement du composant
 
