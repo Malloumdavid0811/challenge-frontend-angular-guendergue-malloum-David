@@ -1,4 +1,4 @@
-## iwiA. Développement du composant
+## A. Développement du composant
 
 - Créer le composant src/components/WalletStatus.js
 - Vérifier l'état de la connexion au portefeuille à l'aide du contexte/des hooks existants (voir src/context/AppContext.js)
